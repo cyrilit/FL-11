@@ -51,11 +51,11 @@ section .tm-content-box.flex-2-col {
 }
 .contact-form button {
     float: right;
+    padding: 10px 30px;
     background-color: white;
     border: 2px solid lightskyblue;
-    color: lightskyblue;
-    padding: 10px 30px;
     border-radius: 0;
+    color: lightskyblue;
 }
 .contact-form button:hover {
     color: white;
