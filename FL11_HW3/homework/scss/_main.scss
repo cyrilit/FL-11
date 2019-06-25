@@ -3,7 +3,8 @@
     height: 50px;
     background-color: $button-color;
     color: white;
-    font-size: 1.3em;
+    font-size: 0.9em;
+    font-weight: 600;
     font-family: $font-secondary;
     border: none;
     border-radius: $border-rad / 2.0;
@@ -42,7 +43,7 @@
 }
 
 body {
-    width: 1920px;
+    width: 100%;
     background-color: $bg-color;
     margin: auto;
     font-family: $font-main;
@@ -178,7 +179,7 @@ footer {
 
     .header-wrap {
         padding: 0 $main-h-padding;
-        height: 930px;
+        height: 750px;
         background-image: $header-pic;
         background-repeat: no-repeat;
         background-position: center;

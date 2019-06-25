@@ -19,7 +19,7 @@
   margin: 0; }
 
 body {
-  width: 1920px;
+  width: 100%;
   background-color: #262626;
   margin: auto;
   font-family: "Hind", sans-serif;
@@ -113,7 +113,8 @@ footer {
       height: 50px;
       background-color: #578b02;
       color: white;
-      font-size: 1.3em;
+      font-size: 0.9em;
+      font-weight: 600;
       font-family: "Source Sans Pro", sans-serif;
       border: none;
       border-radius: 4px; }
@@ -126,7 +127,7 @@ footer {
   color: #2c2f3C; }
   .header .header-wrap {
     padding: 0 160px;
-    height: 930px;
+    height: 750px;
     background-image: url(../img/m-h-day.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -154,7 +155,8 @@ footer {
     height: 50px;
     background-color: #578b02;
     color: white;
-    font-size: 1.3em;
+    font-size: 0.9em;
+    font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     border: none;
     border-radius: 4px; }
