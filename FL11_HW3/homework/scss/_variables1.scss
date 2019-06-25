@@ -1,0 +1,31 @@
+$logo-size: 48px;
+$main-h-padding: 160px;
+$header-pic: url(../img/m-h-day.jpg);
+$border-rad: 8px;
+
+$bg-color: #262626;
+$page-bg-color: white;
+$color-underline: #188eba;
+
+$header-color: #2c2f3C;
+$button-color: #578b02;
+
+$card-colour: #2c2f3c;
+$card-colour-text: #9b9bab;
+
+$footer-colour: #2c2f3c;
+$footer-colour-text: #ADAFC2;
+
+$banner-colour-text: #B3B293;
+$banner-colour-heading: #2c2f3c;
+$banner-gradient: to right, #56870B, #2343CB;
+
+$fonts: (
+  hind: ('Hind', sans-serif),
+  source-sans-pro: ('Source Sans Pro', sans-serif),
+);
+
+$font-main: map-get($fonts, hind);
+$font-secondary: map-get($fonts, source-sans-pro);
+
+

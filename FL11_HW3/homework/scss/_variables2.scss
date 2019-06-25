@@ -1,0 +1,30 @@
+$logo-size: 48px;
+$main-h-padding: 160px;
+$header-pic: url(../img/m-h-night.jpg);
+$border-rad: 8px;
+
+$bg-color: #262626;
+$page-bg-color: #191A23;
+$color-underline: #fc4f3c;
+
+$header-color: white;
+$button-color: #DB9D08;
+
+$card-colour: #2D2F3E;
+$card-colour-text: #9b9bab;
+
+$footer-colour: #2D2F3E;
+$footer-colour-text: #ADAFC2;
+
+$banner-colour-text: #B3B293;
+$banner-colour-heading: white;
+$banner-gradient: to right, #daa027, #923051;
+
+$fonts: (
+  fresca: ('Fresca', sans-serif),
+  source-sans-pro: ('Source Sans Pro', sans-serif),
+  hind: ('Hind', sans-serif),
+);
+
+$font-main: map-get($fonts, fresca);
+$font-secondary: map-get($fonts, source-sans-pro);
