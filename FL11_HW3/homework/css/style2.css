@@ -63,7 +63,7 @@ footer {
       width: 100%;
       border-radius: 8px; }
     .section .section_card .section_card_heading {
-      font-size: 1.5em;
+      font-size: 1.3em;
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 600;
       color: white;
@@ -80,6 +80,8 @@ footer {
         z-index: -1;
         width: 100%; }
     .section .section_card .section_card_text {
+      font-size: 0.8em;
+      font-weight: bold;
       color: #9b9bab;
       text-align: center;
       padding-top: 16px; }
