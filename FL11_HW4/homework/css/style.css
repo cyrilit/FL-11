@@ -190,7 +190,8 @@ main h2 {
 	color: #FFFFFF;
 	width: 148px;
 	height: 24px;
-	font-size: small;
+	font-size: 10px;
+	font-weight: bold;
 }
 
 .fig_desc {
@@ -253,7 +254,6 @@ main h2 {
 	display: flex;
 	justify-content: center;
 	background-color: #FFFFFF;
-	font-size: smaller;
 }
 
 .news button {
@@ -261,6 +261,7 @@ main h2 {
 	color: #FFFFFF;
 	width: 225px;
 	height: 36px;
+	font-size: 11px;
 }
 
 .foot_info {
@@ -283,7 +284,7 @@ main h2 {
 }
 
 .foot_subscr form {
-	font-size: 0.7em;
+	font-size: 16px;;
 }
 
 .foot_subscr form input {
@@ -292,6 +293,7 @@ main h2 {
 	margin-right: 5px;
 	height: 28px;
 	background-color: #F3F3F3;
+	font-size: 11px;
 }
 
 .foot_subscr form button {
@@ -299,6 +301,7 @@ main h2 {
 	color: #FFFFFF;
 	width: 88px;
 	height: 30px;
+	font-size: 11px;
 }
 
 .foot_subscr h2 {
