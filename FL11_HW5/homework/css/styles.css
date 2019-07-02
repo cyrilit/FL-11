@@ -1,32 +1,301 @@
 /*
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
+ */ 
+ /*:root {
+ 	--bg-color--dark: #0b192f;
+ 	--bg-color--header: #162b4d;
+ 	--link: #fff;
+ 	--link--hover: #b8b8b8;
+ 	--bg-footer-color: #162b4d;;
+}*/
+
+ body {
+ 	font-family: roboto;
+}
+ .post-1 {
+ 	background: #B71757;
+}
+ .post-2 {
+ 	background: #0D7E71;
+}
+ .post-3 {
+ 	background: #b1660e;
+}
+ .post-4 {
+ 	background: #d12767;
+}
+ .post-5 {
+ 	background: #2d95bb;
 }
 
-body {
-  font-family: roboto;
+* {
+ 	margin: 0;
+ 	text-decoration: none;
+ 	color: #fff;
 }
-.post-1 {
-	background: #B71757;
+ body {
+ 	font-weight: 200;
+ 	color: #fff;
+ 	background: #0b192f;
 }
-.post-2 {
-	background: #0D7E71;
+  .adaptable {
+ 	display: flex;
 }
-.post-3 {
-	background: #b1660e;
+ .wrapper {
+ 	margin: 0 auto;
+ 	width: 73%;
 }
-.post-4 {
-	background: #d12767;
+header, section, .post__container, footer {
+ 	flex-direction: row;
 }
-.post-5 {
-	background: #2d95bb;
+header {
+ 	background: #162b4d;
+ 	justify-content: space-between;
+ 	align-items: baseline;
+}
+header .logo {
+ 	padding-left: 15px;
+ 	width: 15%;
+ 	align-self: center;
+}
+header .logo p {
+ 	font-size: 28px;
+}
+header .logo p .pink-color {
+ 	color: #B71757;
+}
+.burger {
+ 	display: none;
+}
+header .menu {
+ 	padding-right: 50px;
+ 	width: 35%;
+ 	justify-content: stretch;
+}
+header .menu div {
+ 	display: inline;
+ 	padding: 25px 0 25px 0;
+ 	width: 25%;
+ 	text-decoration: none;
+ 	font-size: 1.4vw;
+ 	color: #fff;
+ 	align-self: center;
+ 	text-align: center;
+}
+header .menu div:hover{
+ 	cursor: pointer;
+ 	background: rgba(184, 184, 184, 0.2);
+}
+header .menu div:focus {
+ 	outline: 0;
+}
+main {
+ 	justify-content: space-between;
+ 	padding: 20px 0 20px 0;
+}
+.posts__container {
+ 	flex-direction: column;
+ 	width: 72%;
+}
+.posts__container section:nth-child(odd) {
+ 	flex-direction: row-reverse;
+}
+.posts__container section:nth-child(even) .post__container {
+ 	flex-direction: row-reverse;
+ 	text-align: right;
+}
+.post__container, .post__pic {
+ 	width: 50%;
+}
+.post__container:last-child {
+ 	width: 100%;
+}
+.post__container .blog__post {
+ 	width: 80%;
+}
+.blog__post .post__header {
+ 	padding: 10% 10% 5% 10%;
+ 	font-weight: 200;
+ 	font-size: 3vw;
+ 	line-height: 1;
+}
+.description {
+ 	padding:  0 10% 10% 10%;
+ 	font-size: 1.2vw;
+ 	line-height: 1.4;
+ 	opacity: 0.8;
+}
+.post-5 .blog__post .post__header {
+ 	padding: 5% 5% 2% 5%;
+}
+.post-5 .description {
+ 	padding: 0 5% 5% 5%;
+}
+.post__container .post__date {
+ 	padding: 10px;
+ 	opacity: 0.4;
+ 	font-size: 2vw;
+}
+.post-5 .post__container {
+ 	justify-content: space-between;
+}
+.post-5 .post__container .blog__post {
+ 	width: 90%;
+}
+.post__date .post__day {
+ 	font-size: 3vw;
+}
+.post__pic img {
+ 	width: 100%;
+ 	height: 100%;
+}
+.post__container:hover, .post__pic:hover {
+ 	cursor: pointer;
+ 	filter: opacity(0.5);
+}
+.news__container {
+ 	flex-direction: column;
+ 	justify-content: flex-start;
+ 	width: 25%;
+}
+.news {
+ 	margin-bottom: 15px;
+ 	background: #fff;
+}
+.news h3{
+ 	padding: 10% 10% 5% 10%;
+ 	font-weight: 300;
+ 	font-size: 2vw;
+ 	color: #0b192f;
+}
+.news p {
+	color: #0b192f;
+}
+.news img {
+ 	width: 100%;
+}
+footer {
+ 	padding: 15px 30px 15px 30px;
+ 	background: #162b4d;
+ 	height: 70px;
+ 	justify-content: space-between;
+ 	align-items: center;
+}
+footer div:nth-child(2) {
+ 	width: 20%;
+}
+footer .info {
+ 	font-size: 1.1vw;
+ 	line-height: 1.4;
+ 	opacity: 0.5;
 }
 
-/* Your styles go here */
+@media screen and (max-width: 768px) {
+ 	.wrapper {
+ 		width: 95%;
+ 	}
+	header, section, .post__container, footer {
+ 		flex-direction: column;
+ 	}
+	.posts__container section {
+ 		flex-direction: column-reverse;
+ 	}
+ 	.posts__container section:nth-child(odd) {
+ 		flex-direction: column-reverse;
+ 	}
+ 	.posts__container section:nth-child(even) .post__container {
+ 		flex-direction: column;
+ 		text-align: left;
+ 	}
+ 	.posts__container section .post__container {
+ 		justify-content: center;
+ 		align-content: center;
+ 	}
+ 	header {
+ 		height: 140px;
+ 		flex-direction: column-reverse;
+ 		justify-content: center;
+ 		text-align: center;
+ 	}
+ 	header .logo {
+ 		padding-bottom: 30px;
+ 		width: 100%;
+ 	}
+ 	.menu {
+ 		display: none;
+ 	}
+ 	.burger {
+ 		align-self: center;
+ 		cursor: pointer;
+ 		display: block;
+ 		padding: 20px;
+ 	}
+ 	.posts__container {
+ 		width: 60%;
+ 	}
+ 	.news__container {
+ 		width: 36%;
+ 	}
+ 	.post__container, .post__pic {
+ 		width: 100%;
+ 	}
+ 	.post__container .blog__post {
+ 		width: 100%;
+ 	}
+ 	footer .info, .description {
+ 		font-size: 2vw;
+ 	}
+ 	.blog__post .post__header {
+ 		font-size: 5vw;
+ 	}
+ 	.post__container .post__date {
+ 		padding: 10%;
+ 		width: 100%;
+ 		align-self: center;
+ 		justify-content: center;
+ 		text-align: center;
+ 		font-size: 3vw;
+ 	}
+ 	.post__date .post__day {
+ 		font-size: 4vw;
+ 	}
+ 	.news h3, .post__container .post__date {
+ 		font-size: 3vw;
+ 	}
+ 	.news h3, .news p {
+ 	color: #0b192f;
+	}
+ 	footer {
+ 		height: 120px;
+ 		justify-content: center;
+ 		text-align: center;
+ 	}
+ 	footer div:nth-child(2) {
+ 		width: 100%;
+ 	}
+}
+
+ @media screen and (max-width: 480px) {
+ 	main {
+ 		flex-direction: column;
+ 	}
+ 	.posts__container {
+ 		width: 100%;
+ 	}
+ 	.news__container {
+ 		width: 100%;
+ 	}
+ 	footer .info, .description {
+ 		font-size: 4vw;
+ 	}
+ 	.blog__post .post__header, .post__container .post__day {
+ 		font-size: 8vw;
+ 	}
+ 	.news h3, .post__container .post__date {
+ 		font-size: 6vw;
+ 	}
+ 	.news h3, .news p{
+ 	color: #0b192f;
+	}
+}
