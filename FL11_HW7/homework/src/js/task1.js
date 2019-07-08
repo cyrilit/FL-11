@@ -28,7 +28,6 @@ if ( email === '' || email === null ) {
 				} else {
 					const confirm_password = prompt('Please enter new password again:', '');
 					if ( new_password === confirm_password ) {
-						accounts[email] = new_password; //change password
 						alert('You have successfully changed your password!');
 					} else {
 						alert('You wrote the wrong password.');
