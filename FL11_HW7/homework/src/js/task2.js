@@ -2,6 +2,7 @@ const resources = {
 	attempts: 3,
 	numBound: 8,
 	expander: 4,
+	factor: 1,
 	total: 0,
 	basicPrizes: {
 		0: 100, 
@@ -13,27 +14,32 @@ const resources = {
 if ( confirm('Do you want to play a game?') ) {
 	for (let i = 0; i < resources.attempts; i++) {		
 		let ballLand = Math.floor( Math.random() * (resources.numBound + 1) );
-		let pocketNumberGuess = prompt(
-			`Chose a roulette pocket number from 0 to ${resources.numBound}
-			Attempts left: ${resources.attempts - i}
-			Total prize: ${resources.total}$
-			Possible prize on current attempt: ${resources.basicPrizes[i]}$`, '');
+		let pocketNumberGuess = parseInt( prompt(
+					`Chose a roulette pocket number from 0 to ${resources.numBound}
+					Attempts left: ${resources.attempts - i}
+					Total prize: ${resources.total}$
+					Possible prize on current attempt: ${resources.basicPrizes[i]}$`, ''), 10 );
 		if (pocketNumberGuess === ballLand) {
-			resources.total += resources.basicPrizes[i];
+			resources.total += resources.basicPrizes[i] * resources.factor;
 			if ( confirm(`Congratulation, you won!   Your prize is: ${resources.total} $. Do you want to continue?`) ) {
-
+				resources.numBound += resources.expander;
+				resources.factor *= 2;
+				i = 0; // set number of attempts to 3 
 			} else {
 				alert(`Thank you for your participation. Your prize is: ${resources.total} $`);
 				if ( confirm('Do you want to play again?') ) {
+					resources.numBound = 8;
+					resources.factor = 1;
 					i = 0;
-					resources.numBound += resources.expander;
-					// two times bigger maximum prize					
-				} else {
-					//
-				}
+				} 
 			}
 		} else {
 			alert(`Thank you for your participation. Your prize is: ${resources.total} $`);
+			if ( confirm('Do you want to play again?') ) {
+					resources.numBound = 8;
+					resources.factor = 1;
+					i = 0;					
+				}
 		}
 	}
 } else {
