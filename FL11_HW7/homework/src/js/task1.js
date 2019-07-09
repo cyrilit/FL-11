@@ -4,7 +4,7 @@ const MIN_PASS_LEN = 5;
 const accounts = {
 	'user@gmail.com': 'UserPass',
 	'admin@gmail.com': 'AdminPass'
-}
+};
 
 const email = prompt('Please enter your email:', '');
 
