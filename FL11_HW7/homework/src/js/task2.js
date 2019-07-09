@@ -14,14 +14,14 @@ const resources = {
 if ( confirm('Do you want to play a game?') ) {
 	for (; resources.attempts > 0; resources.attempts--) {		
 		let ballLand = Math.floor( Math.random() * (resources.numBound + 1) );
+		let currentPrize = resources.basicPrizes[resources.attempts] * resources.factor;
 		let choice = parseInt( prompt(
 					`Chose a roulette pocket number from 0 to ${resources.numBound}
 					Attempts left: ${resources.attempts}
 					Total prize: ${resources.total}$
-					Possible prize on current attempt: 
-					${resources.basicPrizes[resources.attempts] * resources.factor}$`, ''), 10 );
+					Possible prize on current attempt: ${currentPrize}$`, ''), 10 );
 		if (choice === ballLand) {
-			resources.total += resources.basicPrizes[resources.attempts] * resources.factor;
+			resources.total += currentPrize;
 			if ( confirm(`Congratulation, you won!   Your prize is: ${resources.total} $. Do you want to continue?`) ) {
 				resources.numBound += resources.expander; // make number range bigger at 4 as the previous one
 				resources.factor *= 2; // make maximum prize two times bigger
