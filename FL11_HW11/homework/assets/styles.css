@@ -1,2 +1,100 @@
-/* Your styles goes here */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+}
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header {
+	color: #00FFFF;
+	padding-bottom: 40px;	
+}
+h1 {
+	padding-bottom: 20px;
+}
+.hide {
+	display: none;
+}
+.notific-msg {
+	text-align: center;
+	display: none;
+}
+.add-box {
+	color: #E6E6FA;
+	height: 30px;
+	font-size: 47px;
+	margin-bottom: 40px;
+}
+.enabled {
+	color: #00FFFF;
+}
+::placeholder {
+	color: #778899;
+	opacity: 0.7;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding-left: 10px;
+}
+.todo-app {
+	margin-top: 40px;
+	width: 960px;
+	/*height: 550px;*/
+	border: 2px solid #87CEFA;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #B9B9B9;
+}
+header {
+	text-align: center;
+}
+.todo-list {
+	margin-top: 15px;
+}
+.todo-action {
+	display: flex;
+	margin: 5px auto;
+	align-items: center;
+	flex-direction: row;
+}
+.delete-color {
+	color: #87CEFA;
+}
+.todo-action span {
+	padding-left: 5px;
+	color: #8CF0F0;
+}
+.todo-action .pen {
+	flex-grow: 1;
+}
+.add-form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 3px solid #00FFFF;
+}
 
+input {
+	flex-grow: 1;
+	margin-right: 10px;
+	height: 20px;
+	border: 1px solid #87CEFA;
+	border-radius: 5px;
+	padding: 10px 4px;
+	font-size: 22px;
+	height: 40px;
+	margin-bottom: 20px;
+}
+
+.little-input {
+	border: 1px solid #87CEFA;
+	font-size: 20px;
+	color: #808080;
+	width: 100px;
+}
