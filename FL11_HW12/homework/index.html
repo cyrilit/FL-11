@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Homework 12 - Simple TODO List</title>
-  <link rel="stylesheet" href="./assets/styles.css">
+	<meta charset="UTF-8">
+	<title>Homework 12 - Simple TODO List</title>
+	<link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div id="root"></div>
+	<div id="root">
+		<div class="alert-container display-none">
+			<div class="alert-header">
+				<h3>Error!</h3>
+				<span class="alert-close">&#10060;</span>
+			</div>
+			<p class="alert-msg">You can't edit already done item</p>
+		</div>
+		<div id="main" class="page">
+			<h1>Simple TODO application</h1>
+			<a href="#/add" class="btn">Add new task</a>
+			<ul class="todo-list"></ul>
+			<ul class="done-list"></ul>
+			<p class="empty-msg">TODO is empty</p>
+		</div>
+		<div id="add" class="page display-none">
+			<h1>Add task to list</h1>
+			<label><input type="text" class="add-input-field"></label>
+			<br>
+			<a href="#/" class="btn">Cancel</a>
+			<a href="#/" class="add-save-btn btn">Save changes</a>
+		</div>
+		<div id="change" class="page display-none">
+			<h1>Change item</h1>
+			<label><input type="text" class="modify-input-field"></label>
+			<br>
+			<a href="#/" class="btn">Cancel</a>
+			<a href="#/" class="change-save-btn btn">Save changes</a>
+		</div>
+		<template>
+			<li class="todo-item">
+				<label>
+					<img src="assets/img/todo-s.png" alt="[ ]">
+					<input class="display-none" type="checkbox">
+				</label>
+				<a class="modify-link" href="#/modify/:"></a>
+				<a class="delete-link"><img src="assets/img/remove-s.jpg" alt="delete"></a>
+			</li>
+		</template>
+	</div>
 
-  <script src="./src/app.js"></script>
+	<script src="./src/app.js"></script>
 </body>
 </html>
